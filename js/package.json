@@ -1,0 +1,16 @@
+{
+  "name": "Alexa",
+  "version": "0.0.0",
+  "description": "Node for Alexa Skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JP",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-sdk": "^1.0.24",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}

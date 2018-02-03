@@ -1,0 +1,105 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "musik player",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "PlayRadioStationIntent",
+          "slots": [
+            {
+              "name": "RadioStation",
+              "type": "List_of_RadioStations",
+              "samples": [
+                "{RadioStation}",
+                "Spiele {RadioStation}",
+                "Ich möchte {RadioStation} hören"
+              ]
+            }
+          ],
+          "samples": [
+            "Spiele {RadioStation}",
+            "Öffne {RadioStation}",
+            "Ich möchte {RadioStation} hören"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Radio Eins",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "KlassikRadio",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Deutschlandfunk",
+                "synonyms": [
+                  "D.L.F."
+                ]
+              }
+            }
+          ],
+          "name": "List_of_RadioStations"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "PlayRadioStationIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "RadioStation",
+              "type": "List_of_RadioStations",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-PlayRadioStationIntent.IntentSlot-RadioStation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Intent-PlayRadioStationIntent.IntentSlot-RadioStation",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Welchen Radiosender möchtest du hören?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Welche Station soll ich spielen?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Welchen Sender soll ich spielen?"
+          }
+        ]
+      }
+    ]
+  }
+}

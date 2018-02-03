@@ -1,0 +1,29 @@
+{
+  "skillManifest": {
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "Musikplayer"
+        }
+      },
+      "isAvailableWorldwide": true
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sslCertificateType": "Wildcard",
+          "uri": "https://www.tantesnugata.de/node"
+        },
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "sslCertificateType": "Wildcard",
+              "uri": "https://www.tantesnugata.de/node"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
